@@ -1,2 +1,3 @@
-# Tokyo_quest_security
-まだ何も決まってないので特に気にしないで！！
+# TokyoQuest Security Analysis Project
+
+This is a portfolio-integrated graduation research project focused on the security analysis of the Tokyo Quest tourism app.
