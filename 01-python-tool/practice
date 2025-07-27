@@ -1,1 +1,13 @@
+import turtle
+wn=turtle.Screen()
+rito=turtle.Turtle()
+rito.shape("turtle")
+rito.color("blue")
 
+distance=30
+for _ in range(3):
+ rito.forward(distance)
+ rito.stamp()
+ rito.right(20)
+ distance+=10
+wn.exitonclick()
