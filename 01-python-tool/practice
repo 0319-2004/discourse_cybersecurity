@@ -1,3 +1,4 @@
+##カメモジュールの実装
 import turtle
 wn=turtle.Screen()
 rito=turtle.Turtle()
@@ -12,7 +13,7 @@ for _ in range(3):
  distance+=10
 wn.exitonclick()
 
-
+## カメモジュールを使った複雑な形に挑戦
 import turtle
 wn=turtle.Screen()
 nemo=turtle.Turtle()
@@ -24,6 +25,7 @@ for _ in range(30):
     nemo.left(90)
     distance=distance+10
 
+##カメモジュールを使って正五角形
 
 import turtle
 wn=turtle.Screen()
