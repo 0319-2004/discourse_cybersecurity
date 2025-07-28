@@ -11,3 +11,25 @@ for _ in range(3):
  rito.right(20)
  distance+=10
 wn.exitonclick()
+
+
+import turtle
+wn=turtle.Screen()
+nemo=turtle.Turtle()
+nemo.pencolor("blue")
+distance=50
+for _ in range(30):
+   
+    nemo.forward (distance)
+    nemo.left(90)
+    distance=distance+10
+
+
+import turtle
+wn=turtle.Screen()
+rito=turtle.Turtle()
+
+slide_length=100
+for _ in range(5):
+  rito.forward(slide_length)
+  rito.left(72)
