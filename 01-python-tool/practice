@@ -35,3 +35,16 @@ slide_length=100
 for _ in range(5):
   rito.forward(slide_length)
   rito.left(72)
+##色付きの線、for loop
+import turtle
+wn=turtle.Screen()
+rusya=turtle.Turtle()
+color=["yellow","red","green","blue"]
+
+for i in color: # repeat four times
+    rusya.color(i)
+    rusya.forward(50)
+    rusya.left(90)
+    rusya.right(10)
+
+wn.exitonclick()
