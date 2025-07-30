@@ -48,3 +48,21 @@ for i in color: # repeat four times
     rusya.right(10)
 
 wn.exitonclick()
+
+#複雑なものにも挑戦
+import turtle
+wn=turtle.Screen()
+rito=turtle.Turtle()
+
+for _ in range(30):
+    rito.speed(10)
+    rito.forward(50)
+    rito.left(3)
+    rito.forward(-40)
+    rito.right(50)
+#空のstringsにfor を使って増やしてく
+lett=""
+
+for i in range(7):
+    lett+="b"
+print(lett)
