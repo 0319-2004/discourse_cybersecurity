@@ -1,0 +1,72 @@
+```python
+# Assignment 1: Files and CSV — 復習用まとめ
+
+# 1. 文字数カウント
+num = 0
+with open("assets/travel_plans.txt", "r") as f:
+    text = f.read()        # ファイル全体を文字列で取得
+    for ch in text:
+        num += 1           # 各文字をループしてカウント
+# → num == 316
+
+
+# 2. 単語数カウント
+num_words = 0
+with open("assets/emotion_words.txt", "r") as f:
+    text = f.read()        # 全文取得
+    words = text.split()   # 空白で分割して単語リストを作成
+    for _ in words:
+        num_words += 1      # 各単語をループしてカウント
+# → num_words == 48
+
+
+# 3. 行数カウント
+num_lines = 0
+with open("assets/school_prompt.txt", "r") as f:
+    for line in f:         # ファイルを行単位でイテレート
+        num_lines += 1     # 各行をカウント
+# → num_lines == 10
+
+
+# 4. 先頭30文字の抽出
+with open("assets/school_prompt.txt", "r") as f:
+    text = f.read()
+beginning_chars = text[:30]  # スライスで先頭30文字を切り出し
+# → type(beginning_chars)==str, len(beginning_chars)==30
+
+
+# 5. 各行の3番目の単語を抽出
+three = []
+with open("assets/school_prompt.txt", "r") as f:
+    for line in f:
+        words = line.strip().split()  # 改行除去＋空白で単語分割
+        if len(words) >= 3:
+            three.append(words[2])     # インデックス2が3番目の単語
+# → len(three)==10
+
+
+# 6. 各行の先頭単語を抽出
+emotions = []
+with open("assets/emotion_words.txt", "r") as f:
+    for line in f:
+        words = line.strip().split()
+        if words:
+            emotions.append(words[0])  # リスト先頭の単語を追加
+# → len(emotions)==7
+
+
+# 7. 先頭33文字の抽出
+with open("assets/travel_plans.txt", "r") as f:
+    text = f.read()
+first_chars = text[:33]        # スライスで先頭33文字を取得
+# → type(first_chars)==str, len(first_chars)==33
+
+
+# 8. 'p' を含む単語を抽出
+p_words = []
+with open("assets/school_prompt.txt", "r") as f:
+    for line in f:
+        for w in line.strip().split():
+            if 'p' in w:
+                p_words.append(w)
+# → len(p_words)==5
