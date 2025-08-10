@@ -219,3 +219,91 @@ while isInScreen(wn,t):
     t.forward(50)
 
 wn.exitonclick()
+
+
+# ===============================
+# Assignment 4 (part one / more about iteration)
+# ===============================
+
+# 1) sublist (numbers): 5 が出るまでを返す。5 は含めない。
+#    5 が無ければ元のリストを返す。
+# -- あなたの提出画面では sublist という名前でしたが、
+#    STOP 版と名前衝突するので GitHub 用にわかりやすい別名も用意。
+def sublist_until_5(lst):  # (= course name: sublist for numbers)
+    out = []
+    i = 0
+    while i < len(lst) and lst[i] != 5:
+        out.append(lst[i])
+        i += 1
+    # 5 が見つかったら out、無ければ元の lst を返す
+    return out if i < len(lst) else lst
+
+
+# 2) check_nums: 7 が出るまでの数を返す（7は含めない）。
+#    7 が無いなら元のリスト。
+def check_nums(ls_t):
+    result = []
+    i = 0
+    while i < len(ls_t):
+        if ls_t[i] == 7:
+            break
+        result.append(ls_t[i])
+        i += 1
+    # 7が無ければ result は元のリストと同じ内容になる
+    return result if result else ls_t
+
+
+# 3) sublist (strings): "STOP" が出るまでを返す（"STOP"は含めない）。
+#    "STOP" が無ければ元のリスト。
+# -- あなたの実装方針を維持（while + append + break + iの更新）。
+def sublist_until_STOP(lst):  # (= course name: sublist for strings)
+    result = []
+    i = 0
+    while i < len(lst):
+        if lst[i] == "STOP":
+            break
+        result.append(lst[i])
+        i += 1
+    # "STOP" が無い場合は result が元のリストと同じ内容になる
+    return result if i < len(lst) else lst
+
+
+# 4) stop_at_z: 'z' が出たら停止。それまでを新しいリストにして返す。
+#    'z' が無ければ元のリスト（と同じ内容の新リスト）を返す。
+def stop_at_z(lst_string):
+    new_lst = []
+    i = 0
+    while i < len(lst_string):
+        if lst_string[i] == "z":
+            break
+        new_lst.append(lst_string[i])
+        i += 1
+    return new_lst
+
+
+# 5) while 版の総和（sum2 が sum1 と等しくなるように）
+def sum_with_while(lst):
+    sum2 = 0
+    idx = 0
+    while idx < len(lst):
+        sum2 += lst[idx]
+        idx += 1
+    return sum2
+
+
+# 6) beginning: 'bye' が出るまで先頭から集める。
+#    返すのは最大10個まで（'bye'が5番目なら4個だけ）。
+#    'bye' が無いなら先頭10個（10個未満なら全部）。
+# -- あなたの実装を尊重（早期 return で10件に達したら切り上げ）
+def beginning(lst_in):
+    result = []
+    i = 0
+    while i < len(lst_in):
+        if lst_in[i] == 'bye':
+            break
+        result.append(lst_in[i])
+        if len(result) >= 10:
+            return result[:10]
+        i += 1
+    return result
+
